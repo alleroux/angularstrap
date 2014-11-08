@@ -1,0 +1,8 @@
+<div class="container" ng-controller="main">
+	Name: <input type="text" ng-model="name" /> {{ name }}
+	<br />
+	<ul>
+		<li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">{{ cust.name }} - {{ cust.city }}</li>
+	</ul>
+	<a href="#/page2" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>Next</a>
+</div>
